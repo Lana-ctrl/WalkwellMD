@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+
+<head>
+  <title>WalkwellMD</title>
+
+  <!-- slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+  <!-- font awesome style -->
+  <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+  <!-- Custom styles for this template -->
+  <link href="CSS/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="logo">WalkMeWellMD</div>
+    <div class="nav-links">
+      <a href="index.html">Home</a> 
+      <a href="index.html#about">About Me</a>
+      <a href="index.html#surgeries">Surgeries</a>
+      <a href="#">Appointment</a>
+      <a href="contactus.html">Contact Us</a>
+    </div>
+    <div class="book-now-container">
+      <a href="aboutus.html" class="book-now">ABOUT US</a>
+    </div>
+  </nav>
+  
+    <!-- end header section -->
+<!-- Start Appointment Section -->
+<section id="appointment" class="appointment_section layout_padding">
+    <div class="container">
+      <h2 class="text-center mb-4">Book an Appointment</h2>
+      <div class="row align-items-center">
+  
+        <!-- Left Side Image -->
+        <div class="col-md-6">
+          <img src="images/appointment-img.jpg" alt="Appointment" class="img-fluid form-image">
+        </div>
+  
+        <!-- Right Side Form -->
+        <div class="col-md-6">
+            <form action="/submit-appointment" method="POST" id="appointmentForm">
+            <div class="form-group">
+              <input type="text" class="form-control" name="first_name" placeholder="First Name" required>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="last_name" placeholder="Last Name" required>
+            </div>
+            <div class="form-group">
+              <input type="email" class="form-control" name="email" placeholder="Email" required>
+            </div>
+            <div class="form-group">
+              <input type="tel" class="form-control" name="phone_number" placeholder="Phone Number" required>
+            </div>
+            <div class="form-group">
+              <select class="form-control" name="service" required>
+                <option value="">Choose a Service</option>
+                <option value="transaction">Book a Transaction</option>
+                <option value="consultation">Consultation</option>
+                <option value="follow-up">Follow Up</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <textarea class="form-control" rows="5" name="message" placeholder="Describe what you feel..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+  
+      </div>
+    </div>
+  
+  </section>
+  
+  
+  <!-- info section -->
+<section class="info_section">
+    <div class="container">
+      <h4>Get In Touch</h4>
+      <div class="row">
+        <div class="col-lg-10 mx-auto">
+          <div class="info_items">
+            <div class="row">
+              <div class="col-md-4">
+                <a href="https://maps.app.goo.gl/1Xyjbj48sKLooRvq8" target="_blank">
+                  <div class="item">
+                    <div class="img-box">
+                      <i class="fa fa-map-marker"></i>
+                    </div>
+                    <p>Jeddah, Kingdom of Saudi Arabia</p>
+                  </div>
+                </a>
+              </div>
+              <div class="col-md-4">
+                <a href="tel:+966506616414">
+                  <div class="item">
+                    <div class="img-box">
+                      <i class="fa fa-phone"></i>
+                    </div>
+                    <p>+966 506616414</p>
+                  </div>
+                </a>
+              </div>
+              <div class="col-md-4">
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=rabia.hilal55@gmail.com">
+                  <div class="item">
+                    <div class="img-box">
+                      <i class="fa fa-envelope"></i>
+                    </div>
+                    <p>rabia.hilal55@gmail.com</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="social-box">
+      <h4>Follow Us</h4>
+      <div class="box">
+        <a href="https://www.facebook.com/profile.php?id=100042358601144" target="_blank">
+          <i class="fa fa-facebook"></i>
+        </a>
+        <a href="https://x.com/lanaalhaddad" target="_blank">
+          <i class="fa fa-twitter"></i>
+        </a>
+        <a href="https://www.instagram.com/lana_alhaddad/" target="_blank">
+          <i class="fa fa-instagram"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+  <!-- end info_section -->
+  
+  
+    <!-- footer section -->
+    <footer class="footer_section">
+      <div class="container">
+        <p>
+         All Rights Reserved By WalkwellMD
+        </p>
+      </div>
+    </footer>
+    <!-- footer section -->
+  
+    <script src="Js/custom.js"></script>
+    <!-- Google Map -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap"></script>
+    <!-- End Google Map -->
+  
+    <script>
+        const form = document.getElementById('appointmentForm');
+      
+        form.addEventListener('submit', function (e) {
+          e.preventDefault(); // stop normal form submit
+      
+          const formData = new FormData(form);
+      
+          fetch('/submit-appointment', {
+            method: 'POST',
+            body: new URLSearchParams(formData),
+            headers: {
+              'Content-Type': 'application/x-www-form-urlencoded'
+            }
+          })
+          .then(response => response.text())
+          .then(data => {
+            if (data === 'success') {
+              alert('We have received your information!');
+              form.reset(); // Clear all fields
+            } else {
+              alert('Something went wrong. Please try again.');
+            }
+          })
+          .catch(error => {
+            console.error('Error:', error);
+            alert('An error occurred. Please try again.');
+          });
+        });
+      </script>
+      
+  </body>
+  </html>

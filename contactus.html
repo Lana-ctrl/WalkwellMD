@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>WalkwellMD</title>
+
+  <!-- slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+  <!-- font awesome style -->
+  <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />
+  
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="logo">WalkMeWellMD</div>
+    <div class="nav-links">
+      <a href="index.html">Home</a> 
+      <a href="index.html#about">About Me</a>
+      <a href="index.html#surgeries">Surgeries</a>
+      <a href="appointments.html">Appointment</a>
+      <a href="#">Contact Us</a>
+    </div>
+    <div class="book-now-container">
+      <a href="aboutus.html" class="book-now">ABOUT US</a>
+    </div>
+  </nav>
+  
+  
+    </header>
+<!-- end header section -->
+
+<!-- contact section -->
+<section id="contact" class="contact_section layout_padding">
+  <div class="container">
+    <div class="heading_container">
+      <h2>Contact Us</h2>
+    </div>
+    <div class="row">
+      <!-- Left: Contact Form -->
+      <div class="col-md-6">
+        <form id="contactForm">
+          <div>
+            <input type="text" id="firstName" name="firstName" placeholder="First Name" class="form-control mb-3" required />
+          </div>
+          <div>
+            <input type="text" id="lastName" name="lastName" placeholder="Last Name" class="form-control mb-3" required />
+          </div>
+          <div>
+            <select id="gender" name="gender" class="form-control mb-3" required>
+              <option value="" disabled selected>Select Gender</option>
+              <option value="female">Female</option>
+              <option value="male">Male</option>
+            </select>
+          </div>
+          <div>
+            <select id="language" name="language" class="form-control mb-3" required>
+              <option value="" disabled selected>Choose Language</option>
+              <option value="English">English</option>
+              <option value="Arabic">Arabic</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+          <div>
+            <input type="text" id="phoneNumber" name="phoneNumber" placeholder="Phone Number" class="form-control mb-3" required />
+          </div>
+          <div>
+            <input type="email" id="email" name="email" placeholder="Email" class="form-control mb-3" required />
+          </div>
+          <div>
+            <input type="date" id="dob" name="dob" class="form-control mb-3" required />
+          </div>
+          <div>
+            <textarea class="form-control mb-3" id="message" name="message" placeholder="Your Message" rows="6" required></textarea>
+          </div>
+          <div class="d-flex">
+            <button type="submit" class="btn btn-primary">SEND</button>
+          </div>
+        </form>
+        <div id="confirmationMessage" style="display: none; margin-top: 20px; color: green;">
+          We have received your message. Thank you for contacting us!
+        </div>
+      </div>
+
+      <!-- Right: Google Map -->
+      <div class="col-md-6">
+        <div class="map_container" style="height: 100%;">
+          <div class="map" style="height: 100%; min-height: 400px;">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3623.2058419168935!2d39.1870987!3d21.548225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15c3cfe0347ebdf3%3A0x281d997aef403171!2sPert%20Clinic!5e0!3m2!1sen!2ssa!4v1684261234567" 
+              width="100%" 
+              height="100%" 
+              style="border:0;" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- info section -->
+<section class="info_section">
+    <div class="container">
+      <h4>Get In Touch</h4>
+      <div class="row">
+        <div class="col-lg-10 mx-auto">
+          <div class="info_items">
+            <div class="row">
+              <div class="col-md-4">
+                <a href="https://maps.app.goo.gl/1Xyjbj48sKLooRvq8" target="_blank">
+                  <div class="item">
+                    <div class="img-box">
+                      <i class="fa fa-map-marker"></i>
+                    </div>
+                    <p>Jeddah, Kingdom of Saudi Arabia</p>
+                  </div>
+                </a>
+              </div>
+              <div class="col-md-4">
+                <a href="tel:+966506616414">
+                  <div class="item">
+                    <div class="img-box">
+                      <i class="fa fa-phone"></i>
+                    </div>
+                    <p>+966 506616414</p>
+                  </div>
+                </a>
+              </div>
+              <div class="col-md-4">
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=rabia.hilal55@gmail.com">
+                  <div class="item">
+                    <div class="img-box">
+                      <i class="fa fa-envelope"></i>
+                    </div>
+                    <p>rabia.hilal55@gmail.com</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="social-box">
+      <h4>Follow Us</h4>
+      <div class="box">
+        <a href="https://www.facebook.com/profile.php?id=100042358601144" target="_blank">
+          <i class="fa fa-facebook"></i>
+        </a>
+        <a href="https://x.com/lanaalhaddad" target="_blank">
+          <i class="fa fa-twitter"></i>
+        </a>
+        <a href="https://www.instagram.com/lana_alhaddad/" target="_blank">
+          <i class="fa fa-instagram"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+  <!-- end info_section -->
+  
+  
+    <!-- footer section -->
+    <footer class="footer_section">
+      <div class="container">
+        <p>
+         All Rights Reserved By WalkwellMD
+        </p>
+      </div>
+    </footer>
+    <!-- footer section -->
+  
+    <script src="Js/custom.js"></script>
+    <!-- Google Map -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap"></script>
+    <!-- End Google Map -->
+    <script>
+        const form = document.getElementById('contactForm');
+      
+        form.addEventListener('submit', function (e) {
+          e.preventDefault(); // stop normal form submit
+      
+          const formData = new FormData(form);
+      
+          fetch('/submit-contact', {
+            method: 'POST',
+            body: new URLSearchParams(formData),
+            headers: {
+              'Content-Type': 'application/x-www-form-urlencoded'
+            }
+          })
+          .then(response => response.text())
+          .then(data => {
+            if (data === 'success') {
+              alert('We have received your information!');
+              form.reset(); // Clear all fields
+            } else {
+              alert('Something went wrong. Please try again.');
+            }
+          })
+          .catch(error => {
+            console.error('Error:', error);
+            alert('An error occurred. Please try again.');
+          });
+        });
+      </script>
+      
+  </body>
+  </html>
